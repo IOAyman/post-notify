@@ -1,4 +1,4 @@
-###### [post-notify]
+#post-notify#
 
 Make notification if there is new post on Djelfa.info forum
 "قسم بيع و شراء العملات الالكترونية"
