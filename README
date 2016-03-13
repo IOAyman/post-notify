@@ -1,0 +1,16 @@
+# [post-notify]
+
+Make notification if there is new post on Djelfa.info forum
+"قسم بيع و شراء العملات الالكترونية"
+
+***Note***: 
+***Support Mac only
+
+## comile:
+```java
+mvn compile
+```
+## test:
+```java
+mvn test
+```
