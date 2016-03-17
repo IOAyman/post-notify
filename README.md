@@ -3,14 +3,15 @@
 Make notification if there is new post on Djelfa.info forum
 "قسم بيع و شراء العملات الالكترونية"
 
-**Note:**
--Supports Mac & Linux only-
+**Support:** 
+- Mac Os x
+- Linux
 
-**compile:**
-```bash
+**comile:**
+```
 mvn compile
 ```
 **test:**
-```bash
+```
 mvn test
 ```
