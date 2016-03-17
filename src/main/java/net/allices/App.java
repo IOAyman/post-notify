@@ -20,7 +20,7 @@ public class App extends TimerTask {
 
     public static void main(String[] args) {
         Timer timer = new Timer();
-        timer.schedule(new App(), 0, 150000);
+        timer.schedule(new App(), 0, 1000);
     }
 
     public void run() {
@@ -28,10 +28,18 @@ public class App extends TimerTask {
         if (App.lastElement != null && !elemnt.equals(App.lastElement))
             for (int i = 0; i < 10; i++) {
                 try {
+                    String cmd;
+                    String os = System.getProperty("os.name").toLowerCase();
+                    if (os.contains("linux"))
+                        cmd = "notify-send --icon=info \"Djelfa.info\" ";
+                    else if (os.contains("mac"))
+                        cmd = "osascript -e";
+                    else {
+                        System.err.println("OS not supported!");
+                        return;
+                    }
                     Runtime.getRuntime()
-                            .exec(new String[]{"osascript", "-e",
-                                    "display notification \"NEW POST \" with title \"Djelfa info form\" subtitle \"\" sound name \"Glass\""}
-                            );
+                            .exec(cmd + "display notification \"NEW POST \" with title \"Djelfa info form\" subtitle \"\" sound name \"Glass\"");
                 } catch (Exception ignored) {
                 }
 
